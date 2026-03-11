@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b07c0851daf3a4cb3a8a0239f9ad2fc4, type: 3}
   m_Name: FolderTree-Regular1
   m_EditorClassIdentifier: 
-  rootPath: Assets/0_Main2
+  rootPath: Assets
   root:
     rid: 3754018667681284771
   references:
