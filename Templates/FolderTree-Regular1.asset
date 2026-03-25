@@ -19,7 +19,7 @@ MonoBehaviour:
     version: 2
     RefIds:
     - rid: 3754018667681284771
-      type: {class: FolderNode, ns: Hlight.Unity.Editor.FolderTreeBuilder, asm: UnityFolderTreeBuilder}
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
       data:
         name: 0_Main
         children:
@@ -36,98 +36,98 @@ MonoBehaviour:
         - rid: 3754018667681284782
         - rid: 3754018667681284783
     - rid: 3754018667681284772
-      type: {class: FolderNode, ns: Hlight.Unity.Editor.FolderTreeBuilder, asm: UnityFolderTreeBuilder}
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
       data:
         name: 0_Scripts
         children:
         - rid: 3754018667681284784
     - rid: 3754018667681284773
-      type: {class: FolderNode, ns: Hlight.Unity.Editor.FolderTreeBuilder, asm: UnityFolderTreeBuilder}
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
       data:
         name: Animations
         children:
         - rid: 3754018667681284785
         - rid: 3754018667681284786
     - rid: 3754018667681284774
-      type: {class: FolderNode, ns: Hlight.Unity.Editor.FolderTreeBuilder, asm: UnityFolderTreeBuilder}
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
       data:
         name: Audio
         children: []
     - rid: 3754018667681284775
-      type: {class: FolderNode, ns: Hlight.Unity.Editor.FolderTreeBuilder, asm: UnityFolderTreeBuilder}
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
       data:
         name: Fonts
         children: []
     - rid: 3754018667681284776
-      type: {class: FolderNode, ns: Hlight.Unity.Editor.FolderTreeBuilder, asm: UnityFolderTreeBuilder}
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
       data:
         name: Materials
         children: []
     - rid: 3754018667681284777
-      type: {class: FolderNode, ns: Hlight.Unity.Editor.FolderTreeBuilder, asm: UnityFolderTreeBuilder}
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
       data:
         name: Modules
         children:
         - rid: 3754018667681284787
     - rid: 3754018667681284778
-      type: {class: FolderNode, ns: Hlight.Unity.Editor.FolderTreeBuilder, asm: UnityFolderTreeBuilder}
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
       data:
         name: Prefabs
         children: []
     - rid: 3754018667681284779
-      type: {class: FolderNode, ns: Hlight.Unity.Editor.FolderTreeBuilder, asm: UnityFolderTreeBuilder}
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
       data:
         name: Resources
         children: []
     - rid: 3754018667681284780
-      type: {class: FolderNode, ns: Hlight.Unity.Editor.FolderTreeBuilder, asm: UnityFolderTreeBuilder}
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
       data:
         name: SO
         children: []
     - rid: 3754018667681284781
-      type: {class: FolderNode, ns: Hlight.Unity.Editor.FolderTreeBuilder, asm: UnityFolderTreeBuilder}
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
       data:
         name: Scenes
         children: []
     - rid: 3754018667681284782
-      type: {class: FolderNode, ns: Hlight.Unity.Editor.FolderTreeBuilder, asm: UnityFolderTreeBuilder}
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
       data:
         name: Shaders
         children: []
     - rid: 3754018667681284783
-      type: {class: FolderNode, ns: Hlight.Unity.Editor.FolderTreeBuilder, asm: UnityFolderTreeBuilder}
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
       data:
         name: Textures
         children:
         - rid: 3754018667681284788
     - rid: 3754018667681284784
-      type: {class: FolderNode, ns: Hlight.Unity.Editor.FolderTreeBuilder, asm: UnityFolderTreeBuilder}
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
       data:
         name: Editor
         children: []
     - rid: 3754018667681284785
-      type: {class: FolderNode, ns: Hlight.Unity.Editor.FolderTreeBuilder, asm: UnityFolderTreeBuilder}
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
       data:
         name: BuiltIn
         children: []
     - rid: 3754018667681284786
-      type: {class: FolderNode, ns: Hlight.Unity.Editor.FolderTreeBuilder, asm: UnityFolderTreeBuilder}
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
       data:
         name: Spine
         children: []
     - rid: 3754018667681284787
-      type: {class: FolderNode, ns: Hlight.Unity.Editor.FolderTreeBuilder, asm: UnityFolderTreeBuilder}
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
       data:
         name: Ui
         children:
         - rid: 3754018667681284789
     - rid: 3754018667681284788
-      type: {class: FolderNode, ns: Hlight.Unity.Editor.FolderTreeBuilder, asm: UnityFolderTreeBuilder}
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
       data:
         name: GameIcons
         children: []
     - rid: 3754018667681284789
-      type: {class: FolderNode, ns: Hlight.Unity.Editor.FolderTreeBuilder, asm: UnityFolderTreeBuilder}
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
       data:
         name: Popups
         children: []
