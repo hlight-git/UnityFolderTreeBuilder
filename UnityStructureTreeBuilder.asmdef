@@ -1,6 +1,6 @@
 {
-    "name": "UnityFolderTreeBuilder",
-    "rootNamespace": "",
+    "name": "UnityStructureTreeBuilder",
+    "rootNamespace": "Hlight.Unity.Editor.StructureTreeBuilder",
     "references": [],
     "includePlatforms": [
         "Editor"
