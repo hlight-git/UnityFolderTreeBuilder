@@ -1,0 +1,430 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b07c0851daf3a4cb3a8a0239f9ad2fc4, type: 3}
+  m_Name: StructureTree-Regular
+  m_EditorClassIdentifier: 
+  rootPath: Assets
+  root:
+    rid: 3754019121244406238
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 3754019121244406238
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: 0_Main
+        asmdef:
+          rid: -2
+        children:
+        - rid: 3754019121244406239
+        - rid: 3754019121244406240
+        - rid: 3754019121244406241
+        - rid: 3754019121244406242
+        - rid: 3754019121244406243
+        - rid: 3754019121244406244
+    - rid: 3754019121244406239
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: 0_Scripts
+        asmdef:
+          rid: -2
+        children:
+        - rid: 3754019121244406246
+        - rid: 3754019121244406247
+        - rid: 3754019121244406248
+        - rid: 3754019121244406249
+        - rid: 3754019121244406250
+        - rid: 3754019121244406251
+    - rid: 3754019121244406240
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: Art
+        asmdef:
+          rid: -2
+        children:
+        - rid: 3754019121244406252
+        - rid: 3754019121244406253
+        - rid: 3754019121244406254
+        - rid: 3754019121244406255
+        - rid: 3754019121244406256
+        - rid: 3754019121244406257
+    - rid: 3754019121244406241
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: Audio
+        asmdef:
+          rid: -2
+        children:
+        - rid: 3754019121244406258
+        - rid: 3754019121244406259
+    - rid: 3754019121244406242
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: Prefabs
+        asmdef:
+          rid: -2
+        children:
+        - rid: 3754019121244406260
+        - rid: 3754019121244406261
+        - rid: 3754019121244406262
+    - rid: 3754019121244406243
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: Scenes
+        asmdef:
+          rid: -2
+        children: []
+    - rid: 3754019121244406244
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: ScriptableObjects
+        asmdef:
+          rid: -2
+        children:
+        - rid: 3754019121244406263
+        - rid: 3754019121244406264
+        - rid: 3754019121244406265
+    - rid: 3754019121244406246
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: Application
+        asmdef:
+          rid: 3754019121244406322
+        children: []
+    - rid: 3754019121244406247
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: Core
+        asmdef:
+          rid: 3754019121244406318
+        children:
+        - rid: 3754019121244406266
+        - rid: 3754019121244406267
+        - rid: 3754019121244406268
+        - rid: 3754019121244406269
+    - rid: 3754019121244406248
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: Features
+        asmdef:
+          rid: -2
+        children: []
+    - rid: 3754019121244406249
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: Infrastructure
+        asmdef:
+          rid: 3754019121244406325
+        children: []
+    - rid: 3754019121244406250
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: Scenes
+        asmdef:
+          rid: -2
+        children:
+        - rid: 3754019121244406270
+        - rid: 3754019121244406271
+    - rid: 3754019121244406251
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: SharedUI
+        asmdef:
+          rid: 3754019121244406321
+        children: []
+    - rid: 3754019121244406252
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: 2D
+        asmdef:
+          rid: -2
+        children:
+        - rid: 3754019121244406272
+        - rid: 3754019121244406273
+        - rid: 3754019121244406274
+        - rid: 3754019121244406275
+        - rid: 3754019121244406276
+    - rid: 3754019121244406253
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: 3D
+        asmdef:
+          rid: -2
+        children:
+        - rid: 3754019121244406277
+    - rid: 3754019121244406254
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: Fonts
+        asmdef:
+          rid: -2
+        children: []
+    - rid: 3754019121244406255
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: Shaders
+        asmdef:
+          rid: -2
+        children: []
+    - rid: 3754019121244406256
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: UI
+        asmdef:
+          rid: -2
+        children: []
+    - rid: 3754019121244406257
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: Vfx
+        asmdef:
+          rid: -2
+        children: []
+    - rid: 3754019121244406258
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: Music
+        asmdef:
+          rid: -2
+        children: []
+    - rid: 3754019121244406259
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: Sfx
+        asmdef:
+          rid: -2
+        children: []
+    - rid: 3754019121244406260
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: Gameplay
+        asmdef:
+          rid: -2
+        children: []
+    - rid: 3754019121244406261
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: Home
+        asmdef:
+          rid: -2
+        children: []
+    - rid: 3754019121244406262
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: Resources
+        asmdef:
+          rid: -2
+        children: []
+    - rid: 3754019121244406263
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: Gameplay
+        asmdef:
+          rid: -2
+        children: []
+    - rid: 3754019121244406264
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: Home
+        asmdef:
+          rid: -2
+        children: []
+    - rid: 3754019121244406265
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: Resources
+        asmdef:
+          rid: -2
+        children: []
+    - rid: 3754019121244406266
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: Common
+        asmdef:
+          rid: -2
+        children: []
+    - rid: 3754019121244406267
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: Extensions
+        asmdef:
+          rid: -2
+        children: []
+    - rid: 3754019121244406268
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: Input
+        asmdef:
+          rid: -2
+        children:
+        - rid: 3754019121244406280
+    - rid: 3754019121244406269
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: Tweens
+        asmdef:
+          rid: -2
+        children:
+        - rid: 3754019121244406281
+        - rid: 3754019121244406282
+    - rid: 3754019121244406270
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: Gameplay
+        asmdef:
+          rid: 3754019121244406319
+        children:
+        - rid: 3754019121244406323
+    - rid: 3754019121244406271
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: Home
+        asmdef:
+          rid: 3754019121244406320
+        children:
+        - rid: 3754019121244406324
+    - rid: 3754019121244406272
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: Animations
+        asmdef:
+          rid: -2
+        children:
+        - rid: 3754019121244406286
+        - rid: 3754019121244406287
+    - rid: 3754019121244406273
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: Common
+        asmdef:
+          rid: -2
+        children: []
+    - rid: 3754019121244406274
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: GameIcons
+        asmdef:
+          rid: -2
+        children: []
+    - rid: 3754019121244406275
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: Gameplay
+        asmdef:
+          rid: -2
+        children: []
+    - rid: 3754019121244406276
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: Materials
+        asmdef:
+          rid: -2
+        children: []
+    - rid: 3754019121244406277
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: Materials
+        asmdef:
+          rid: -2
+        children: []
+    - rid: 3754019121244406280
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: TouchDetection
+        asmdef:
+          rid: -2
+        children: []
+    - rid: 3754019121244406281
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: Move
+        asmdef:
+          rid: -2
+        children: []
+    - rid: 3754019121244406282
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: Rotation
+        asmdef:
+          rid: -2
+        children: []
+    - rid: 3754019121244406286
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: BuiltIn
+        asmdef:
+          rid: -2
+        children: []
+    - rid: 3754019121244406287
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: Spine
+        asmdef:
+          rid: -2
+        children: []
+    - rid: 3754019121244406318
+      type: {class: AsmdefConfig, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        assemblyName: Core
+        references: []
+    - rid: 3754019121244406319
+      type: {class: AsmdefConfig, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        assemblyName: Gameplay
+        references:
+        - Core
+        - SharedUI
+    - rid: 3754019121244406320
+      type: {class: AsmdefConfig, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        assemblyName: Home
+        references:
+        - Core
+        - SharedUI
+    - rid: 3754019121244406321
+      type: {class: AsmdefConfig, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        assemblyName: SharedUI
+        references:
+        - Core
+    - rid: 3754019121244406322
+      type: {class: AsmdefConfig, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        assemblyName: Application
+        references:
+        - Core
+        - Gameplay
+        - Home
+        - SharedUI
+        - Infrastructure
+    - rid: 3754019121244406323
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: UI
+        asmdef:
+          rid: -2
+        children: []
+    - rid: 3754019121244406324
+      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        name: UI
+        asmdef:
+          rid: -2
+        children: []
+    - rid: 3754019121244406325
+      type: {class: AsmdefConfig, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
+      data:
+        assemblyName: Infrastructure
+        references:
+        - Core
