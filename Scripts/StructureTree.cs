@@ -59,6 +59,9 @@ namespace Hlight.Unity.Editor.StructureTreeBuilder
                 CreateNodeRecursive(currentPath, child, visited);
         }
 
+        private static string EscapeJson(string s) =>
+            s.Replace("\\", "\\\\").Replace("\"", "\\\"");
+
         private static void WriteAsmdef(string folderPath, AsmdefConfig config)
         {
             var filePath = Path.Combine(folderPath, $"{config.assemblyName}.asmdef");
@@ -66,15 +69,22 @@ namespace Hlight.Unity.Editor.StructureTreeBuilder
                 return;
 
             var refs = config.references ?? new List<string>();
-            var refsJson = refs.Count > 0
-                ? $"[\n        \"{string.Join("\",\n        \"", refs)}\"\n    ]"
+            var escapedRefs = refs.ConvertAll(EscapeJson);
+            var refsJson = escapedRefs.Count > 0
+                ? $"[\n        \"{string.Join("\",\n        \"", escapedRefs)}\"\n    ]"
                 : "[]";
 
+            // Auto-detect Editor folder → set includePlatforms
+            var folderName = Path.GetFileName(folderPath);
+            var isEditor = string.Equals(folderName, "Editor", StringComparison.OrdinalIgnoreCase);
+            var platformsJson = isEditor ? "[\"Editor\"]" : "[]";
+
+            var escapedName = EscapeJson(config.assemblyName);
             var json = $@"{{
-    ""name"": ""{config.assemblyName}"",
-    ""rootNamespace"": ""{config.assemblyName}"",
+    ""name"": ""{escapedName}"",
+    ""rootNamespace"": ""{escapedName}"",
     ""references"": {refsJson},
-    ""includePlatforms"": [],
+    ""includePlatforms"": {platformsJson},
     ""excludePlatforms"": [],
     ""allowUnsafeCode"": false,
     ""overrideReferences"": false,
