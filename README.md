@@ -1,66 +1,74 @@
-## Unity Folder Tree Builder
+## Unity Structure Tree Builder
 
-`UnityFolderTreeBuilder` cung cấp một `ScriptableObject` (`FolderTree`) và custom editor để:
+`UnityStructureTreeBuilder` cung cấp một `ScriptableObject` (`StructureTree`) và custom editor để:
 
-- **Export** cấu trúc thư mục hiện có trong Project thành một `FolderTree` asset.
-- **Tạo lại** (re-create) cấu trúc thư mục từ một `FolderTree` asset.
+- **Export** cấu trúc thư mục hiện có trong Project thành một `StructureTree` asset (bao gồm cả `.asmdef`).
+- **Tạo lại** cấu trúc thư mục + assembly definition từ một `StructureTree` asset.
 
 ### Cấu trúc chính
 
-- `FolderTree.cs`
-  - `rootPath` (`string`): đường dẫn thư mục cha, nơi sẽ tạo các folder con (ví dụ: `Assets/Submodules`).
-  - `root` (`FolderNode`): node root duy nhất, tên chính là tên thư mục gốc (ví dụ: `CompositeTask`), bên dưới là `children`.
-  - `CreateFolders()`: tạo lại cây thư mục bắt đầu từ `rootPath` và `root`.
-  - Menu:
-    - **Assets/Export Folder Tree**: export một folder trong Project thành `FolderTree` asset.
-      - Hỗ trợ:
-        - Chọn folder bên panel phải.
-        - Right-click folder ở cây folder bên trái (dùng `ProjectWindowUtil.GetActiveFolderPath` qua reflection).
+- `StructureTree.cs`
+  - `rootPath` (`string`): đường dẫn thư mục cha (ví dụ: `Assets/Submodules`).
+  - `root` (`StructureNode`): node gốc của cây cấu trúc.
+  - `CreateStructure()`: tạo folders + `.asmdef` files từ cây config.
+  - Menu **Assets/Export Structure Tree**: export folder hiện có thành `StructureTree` asset.
 
-- `FolderTreeEditor.cs`
+- `StructureNode`
+  - `name`: tên thư mục.
+  - `children`: danh sách node con (`List<StructureNode>`).
+  - `asmdef` (`AsmdefConfig`, nullable): nếu có, tạo `.asmdef` trong folder này.
+
+- `AsmdefConfig`
+  - `assemblyName`: tên assembly.
+  - `references`: danh sách tên các assembly phụ thuộc.
+
+- `StructureTreeEditor.cs`
   - Custom inspector:
-    - Hiển thị và cho phép chỉnh `rootPath`.
-    - Vẽ cây `FolderNode` (một root, nhiều children lồng nhau).
-    - Nút **Create Folders** để gọi `CreateFolders()`.
+    - `Root Path` với nút browse folder (`...`).
+    - Cây `StructureNode` với foldout, thêm/xóa node.
+    - Toggle `ASM`/`+a` trên mỗi node để gắn/bỏ asmdef config.
+    - Asmdef config: field Assembly name + References (dropdown chọn từ các asm trong config hoặc tự điền).
+    - Nút `All`/`None` để expand/collapse toàn bộ tree.
+    - Badge `(N)` hiện số children khi node collapsed.
+    - Cảnh báo khi có trùng tên assembly.
+    - Confirm dialog khi xóa node có children.
+    - Nút **Create Structure** để tạo toàn bộ.
 
-### Cách export FolderTree từ Project
+### Cách export từ Project
 
-1. Trong Project window, chọn **một folder**:
-   - Chọn ở panel phải **hoặc**
-   - Right-click trực tiếp folder ở cây bên trái.
-2. Vào menu **Assets → Export Folder Tree**.
-3. Chọn nơi lưu và tên file `FolderTree` asset (mặc định: `[FolderName]FolderTree.asset`).
-4. Asset tạo ra sẽ:
-   - `rootPath` = thư mục cha của folder bạn chọn.
-   - `root` = cây `FolderNode` bắt đầu từ folder đó trở xuống.
+1. Trong Project window, chọn **một folder** (panel phải hoặc right-click cây bên trái).
+2. Menu **Assets → Export Structure Tree**.
+3. Chọn nơi lưu asset.
+4. Asset sẽ capture:
+   - Cây thư mục con.
+   - `.asmdef` files nếu có (tên + references).
 
-### Cách dùng FolderTree để tạo lại cấu trúc thư mục
+### Cách tạo cấu trúc từ asset
 
-1. Mở `FolderTree` asset trong Inspector.
-2. Chỉnh sửa cây `root` nếu cần:
-   - Đổi tên node (tên folder).
-   - Thêm/bớt child (`+` / `x`).
-3. Đảm bảo `rootPath` trỏ tới nơi bạn muốn tạo cây thư mục (ví dụ: `Assets` hoặc `Assets/Submodules`).
-4. Bấm nút **Create Folders**:
-   - Tool sẽ tạo đủ các folder theo tree (bỏ qua các node `null` hoặc tên rỗng).
-   - Có cơ chế tránh vòng lặp vô hạn trong dữ liệu (dùng `HashSet<FolderNode>`).
+1. Mở `StructureTree` asset trong Inspector.
+2. Chỉnh `Root Path` (nơi sẽ tạo cây thư mục).
+3. Chỉnh cây `root`:
+   - Đổi tên node, thêm/bớt children (`+` / `−`).
+   - Gắn asmdef cho node cần (`+a` → nhập Assembly name + References).
+4. Bấm **Create Structure**:
+   - Tạo folders + `.asmdef` files (skip nếu đã tồn tại).
+   - Folder tên `Editor` tự thêm `includePlatforms: ["Editor"]` vào asmdef.
 
 ### Ghi chú
 
-- Tool bỏ qua các thư mục bắt đầu bằng dấu chấm (`.`) khi export (ví dụ `.git`, `.vscode`).
-- `FolderNode.children` là `List<FolderNode>` serialize bằng `SerializeReference`, cho phép cấu trúc cây lồng nhau linh hoạt.
-- Khi thay đổi cấu trúc `FolderTree` (ví dụ từ `roots` → `root`), các asset cũ có thể không tương thích, nên nên export lại từ folder thật nếu cần.
+- Bỏ qua thư mục bắt đầu bằng `.` khi export.
+- `.asmdef` chỉ được ghi mới, không ghi đè file đã tồn tại.
+- `StructureNode.children` và `AsmdefConfig` dùng `[SerializeReference]` cho phép nullable + cây lồng nhau.
 
 ### Dành cho AI Agent
 
-- **Entry points quan trọng**:
-  - `FolderTree.CreateFolders()` là API chính để tạo thư mục từ asset.
-  - Menu `Assets/Export Folder Tree` là nơi khởi tạo asset từ cấu trúc thư mục có sẵn.
+- **Entry points**:
+  - `StructureTree.CreateStructure()`: API chính để tạo folders + asmdefs.
+  - Menu `Assets/Export Structure Tree`: tạo asset từ cấu trúc có sẵn.
 - **Invariants**:
-  - `root` là **duy nhất**, không dùng danh sách `roots`.
-  - `rootPath` + cây `root` phải luôn đồng bộ: các folder được tạo dưới `rootPath`, bắt đầu từ `root.name`.
-  - Không tạo/thao tác file, chỉ tạo thư mục (`Directory.CreateDirectory`).
+  - `root` là duy nhất. `rootPath` + `root` phải đồng bộ.
+  - Chỉ tạo thư mục và `.asmdef`, không tạo/xóa file khác.
+  - `WriteAsmdef` skip nếu file đã tồn tại (không overwrite).
 - **Giới hạn**:
-  - Chỉ hoạt động trong Editor (các API `UnityEditor`).
-  - Không xử lý symbolic link, chỉ thư mục thật trong Project.
-
+  - Chỉ hoạt động trong Editor (`UnityEditor` API).
+  - Không xử lý symbolic link.
