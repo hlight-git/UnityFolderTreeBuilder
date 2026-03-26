@@ -111,8 +111,6 @@ MonoBehaviour:
         children:
         - rid: 3754019121244406266
         - rid: 3754019121244406267
-        - rid: 3754019121244406268
-        - rid: 3754019121244406269
     - rid: 3754019121244406248
       type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
       data:
@@ -261,23 +259,6 @@ MonoBehaviour:
         asmdef:
           rid: -2
         children: []
-    - rid: 3754019121244406268
-      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
-      data:
-        name: Input
-        asmdef:
-          rid: -2
-        children:
-        - rid: 3754019121244406280
-    - rid: 3754019121244406269
-      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
-      data:
-        name: Tweens
-        asmdef:
-          rid: -2
-        children:
-        - rid: 3754019121244406281
-        - rid: 3754019121244406282
     - rid: 3754019121244406270
       type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
       data:
@@ -335,27 +316,6 @@ MonoBehaviour:
       type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
       data:
         name: Materials
-        asmdef:
-          rid: -2
-        children: []
-    - rid: 3754019121244406280
-      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
-      data:
-        name: TouchDetection
-        asmdef:
-          rid: -2
-        children: []
-    - rid: 3754019121244406281
-      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
-      data:
-        name: Move
-        asmdef:
-          rid: -2
-        children: []
-    - rid: 3754019121244406282
-      type: {class: StructureNode, ns: Hlight.Unity.Editor.StructureTreeBuilder, asm: UnityStructureTreeBuilder}
-      data:
-        name: Rotation
         asmdef:
           rid: -2
         children: []
