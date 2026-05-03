@@ -1,0 +1,11 @@
+{
+    "name": "com.hlight.unity-structure-tree-builder",
+    "version": "1.0.3",
+    "displayName": "Unity Structure Tree Builder",
+    "description": "Editor tool for visualizing and building Unity project folder structure trees.",
+    "unity": "6000.0",
+    "type": "tool",
+    "author": {
+        "name": "Hlight"
+    }
+}
